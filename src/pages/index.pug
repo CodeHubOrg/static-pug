@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')  
+  head  
+    title= title
+  body
+    include ../partial-pugs/header.pug
+    h1 #{title}
+    
+    if contentblocks
+      each block in contentblocks
+        div!= block.content
+      // selecting a single one
+      each block in contentblocks
+        if block.name == 'blockC.md'
+          div!= block.content
+    h2 #{subtitle}
+    p Here is a little block
+    include ../partial-pugs/footer.pug
+     

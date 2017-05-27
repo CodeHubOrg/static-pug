@@ -1,0 +1,20 @@
+{
+  "name": "Static-Pug",
+  "version": "1.0.0",
+  "description": "A mini static site generator using PugJS",
+  "repository": "https://github.com/CodeHubOrg/static-pug.git",
+  "scripts": {
+    "start": "node writeOptionsWithMD.js && pug src/pages -o dist --pretty -O options-md.js", 
+    "simple": "pug src/pages -o dist-simple --pretty -O options.js",
+    "writeOptions": "node writeOptionsWithMD.js",    
+    "writeHTML": "pug src/pages -o dist --pretty -O options-md.js"
+  },
+  "keywords": ["pug","pug-cli","node","marked"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.0-rc.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "marked": "^0.3.6"   
+  }
+}
